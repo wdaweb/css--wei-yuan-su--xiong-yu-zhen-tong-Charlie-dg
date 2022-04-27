@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      width: 492px;
+      height: 62px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    .box1 {
+      width: 30px;
+      height: 60px;
+      background: linear-gradient(180deg, #fff 0%, #ccc 60%, #fff 100%);
+      border: 1px solid #999;
+      position: relative;
+      border-radius: 10%;
+
+
+    }
+
+    .box1::before {
+      content: "";
+      width: 35px;
+      height: 45px;
+      background: linear-gradient(180deg, #fff 0%, #ccc 60%, #fff 100%);
+      ;
+      border: 1px solid #999;
+      position: absolute;
+      left: 30px;
+      top: 7px;
+
+    }
+
+    .box1::after {
+      content: "";
+      width: 35px;
+      height: 45px;
+      background: linear-gradient(180deg, #fff 0%, #ccc 60%, #fff 100%);
+      border: 1px solid #999;
+      position: absolute;
+      left: 385px;
+      top: 7px;
+      border-radius: 10%;
+    }
+
+    .box2 {
+      width: 150px;
+      height: 60px;
+      background: linear-gradient(180deg, #fff 0%, #ccc 60%, #fff 100%);
+      border: 1px solid #999;
+      position: absolute;
+      left: 66px;
+      top: 0;
+
+      color: #999;
+      font-size: 10px;
+      line-height: 105px;
+    }
+
+    .box2::before {
+      content: "";
+      width: 20px;
+      height: 60px;
+      background: #000;
+      border: 1px solid #999;
+      position: absolute;
+      left: 150px;
+      top: -1px;
+    }
+
+    .box2::after {
+      content: "";
+      width: 150px;
+      height: 60px;
+      background: linear-gradient(180deg, rgb(238, 238, 105) 0%, #ccc 60%, rgb(238, 238, 105) 100%);
+      border: 1px solid #999;
+      position: absolute;
+      left: 170px;
+      top: -1px;
+    }
+
+    .box3 {
+      width: 70px;
+      height: 2px;
+      background: #999;
+      position: absolute;
+      left: 422px;
+      top: 50%;
+    }
+
+    .scale {
+      width: 150px;
+      height: 10px;
+      background-image: repeating-linear-gradient(90deg, #999 0, #999 1px, transparent 0, transparent 8px);
+      position: absolute;
+      left: -1px;
+      top: -1px;
+    }
+
+    .scale::before {
+      content: "";
+      width: 150px;
+      height: 10px;
+      background-image: repeating-linear-gradient(90deg, #999 0, #999 1px, transparent 0, transparent 8px);
+      position: absolute;
+      left: 171px;
+      top: 0;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box1"></div>
+    <!-- 針筒中間部分 -->
+    <div class="box2">
+      Made in Taiwan
+      <!-- 刻度 -->
+      <div class="scale"></div>
+    </div>
+    <!-- 針 -->
+    <div class="box3"></div>
+  </div>
+</body>
+
+</html>
